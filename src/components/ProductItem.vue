@@ -1,5 +1,7 @@
-<template> 
-  <p>{{product.nome}} - {{product.quantidade}} -  {{product.descricao}}</p>
+<template>
+  <div class='produto'>
+  <p><strong>{{product.nome}} </strong> | {{product.descricao}}</p>
+  </div>
 </template>
 
 <script>
@@ -25,5 +27,12 @@ li {
 }
 a {
   color: #42b983;
+}
+.produto{
+  height: 200px;
+  margin-top:10px;
+  float: left;
+  padding: 10px;
+  border: solid 1px #cccccc ;
 }
 </style>

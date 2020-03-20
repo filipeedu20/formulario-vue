@@ -5,7 +5,7 @@
           <ProductItem :product="product" /> 
        </li>
      </ul>
-     Total {{totalItens}}
+     Total de Produtos: {{totalItens}}
    </div>
 </template>
 
@@ -27,16 +27,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-</style>

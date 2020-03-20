@@ -19,7 +19,7 @@ export default {
         },
         {
           nome:'Mouse Razer',
-          descricao:'Teclado com alta velocidade',
+          descricao:'Sensor óptico de ótima qualidade',
         },
         {
           nome:'Computador',
@@ -36,8 +36,7 @@ export default {
     insertProduct(prod){
       this.products = this.products.concat({
         nome: prod.nome,
-        descricao: prod.descricao,
-        quantidade: prod.quantidade,      
+        descricao: prod.descricao,  
       })
     }
   }

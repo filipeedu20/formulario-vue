@@ -1,10 +1,10 @@
 <template>
     <form @submit="onFormSubmit">
-        <p>Cadastro de Produtos </p>
+        <h1>Cadastro de Produtos </h1>
         <p>
             <label>Nome do Produto</label>
             <input type="text" v-model="nome">
-            {{errorName}}
+            <p class='alert'>{{errorName}}<p>
         </p>
         <p>
             <label>Descrição</label>
@@ -30,8 +30,8 @@ export default {
         insertProduct: Function
     },
     watch:{
-        desc_produto(){
-            if(this.descricao.length>15){
+        nome(){
+            if(this.nome.length>15){
                 this.isNameLimitExceeded = true;
                 this.errorName = "O nome do produto não pode ultrapassar os 15 caracteres";
             }else{
@@ -49,11 +49,28 @@ export default {
             }
            this.insertProduct({
                descricao: this.descricao,
-               nome: this.nome,
-               quantidade:this.quantidade
+               nome: this.nome
            });
        }
     }, 
 }
 </script>
+<style scoped>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  margin: 40px 0 0;
+  color: #2c3e50;
+}
+.alert{
+    color: brown;
+}
+</style>
+
 
